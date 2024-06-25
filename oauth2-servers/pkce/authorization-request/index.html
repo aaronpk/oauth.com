@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+		<meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"7fe4a5104e",applicationID:"22011134"};;/*! For license information please see nr-loader-rum-1.260.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},S={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},R={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!R[e])throw new Error("Runtime for ".concat(e," was never set"));return R[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");R[e]={...(0,i.D)(t,S),...D};const r=(0,n.ek)(e);r&&(r.runtime=R[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.260.1",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>l,Tt:()=>c,_A:()=>a,iS:()=>s,il:()=>i,sK:()=>f,ux:()=>u,v6:()=>o,w1:()=>d});var n=r(7894);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(i&&window.document.documentMode)),l=!!a.navigator?.sendBeacon,f=Date.now()-(0,n.z)()},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:S,runtime:R={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,S=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,S||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),R.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],R.ptid=e.agentIdentifier,(0,i.sU)(e.agentIdentifier,R),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),S(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=S(w,e,!0,"api")})),p.addPageAction=S(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,S(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=()=>{try{(0,o.p)(l.xS,["API/start/called"],void 0,n.D.metrics,b),b.emit("manual-start-all")}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function S(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function R(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((e=>{(0,d.Z)("Downloading runtime APIs failed...",e),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=S(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?S(_,"routeName",void 0,n.D.softNav):S(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>R()),!0):R(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.260.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.260.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-WLWoh5UWJ/3XNXjYcJoBc8bSPHGDdu86FTMTgY1yxRTQeEmWWEBFFVPIfCRSbxd8K297eHg86RaJPD+UJxG1+w=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.260.1.PROD"]=self["webpackChunk:NRBA-1.260.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402),n=i(8325);class o{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e,this.ee=n.ee.get(e)}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var a=i(3325),s=i(234);const c=Object.values(a.D);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(2758);var l=i(8e3),f=i(5938),g=i(3960),p=i(385);const h=e=>p.il&&!0===(0,s.Mt)(e,"privacy.cookies_enabled");function v(e){return!!s.Yu.MO&&h(e)&&!0===(0,s.Mt)(e,"session_trace.enabled")}var m=i(7872);class b extends f.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,s.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,l.RP)(e,r):this.ee.on("manual-start-all",(0,m.Z)((()=>{(0,l.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(h(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===a.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,l.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,l.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};p.il?(0,g.b2)((()=>n()),!0):n()}#t(e,t){return e!==a.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!v(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var y=i(7633);class A extends b{static featureName=y.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,y.t,r),this.importAggregator()}}var w=i(1117),_=i(1284);class E extends w.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,_.D)(e,(function(e,r){t[e]=x(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,_.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=x(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=D(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=x(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=D(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function D(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var S=i(8632),R=i(4351);var k=i(5546),N=i(7956),P=i(3239),j=i(9251),T=i(7894);class I extends b{static featureName=j.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,j.t,r),p.il&&((0,N.N)((()=>(0,k.p)("docHidden",[(0,T.z)()],void 0,j.t,this.ee)),!0),(0,P.bP)("pagehide",(()=>(0,k.p)("winPagehide",[(0,T.z)()],void 0,j.t,this.ee))),this.importAggregator())}}var O=i(3081);class M extends b{static featureName=O.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,O.t9,r),this.importAggregator()}}new class extends o{constructor(t,r){super(r),p._A?(this.sharedAggregator=new E({agentIdentifier:this.agentIdentifier}),this.features={},(0,S.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.D.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.p[e.featureName]-a.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.D.softNav)return;const n=function(e){switch(e){case a.D.ajax:return[a.D.jserrors];case a.D.sessionTrace:return[a.D.ajax,a.D.pageViewEvent];case a.D.sessionReplay:return[a.D.sessionTrace];case a.D.pageViewTiming:return[a.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,S.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[A,I,M],loaderType:"lite"})})()})();</script>
+	<!-- wp_head -->
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Authorization Request - OAuth 2.0 Simplified</title>
+	<meta name="description" content="When the native app begins the authorization request, instead of immediately launching a browser, the client first creates what is known as a &quot;code" />
+	<link rel="canonical" href="https://www.oauth.com/oauth2-servers/pkce/authorization-request/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Authorization Request - OAuth 2.0 Simplified" />
+	<meta property="og:description" content="When the native app begins the authorization request, instead of immediately launching a browser, the client first creates what is known as a &quot;code" />
+	<meta property="og:url" content="https://www.oauth.com/oauth2-servers/pkce/authorization-request/" />
+	<meta property="og:site_name" content="OAuth 2.0 Simplified" />
+	<meta property="article:modified_time" content="2021-12-16T22:56:30+00:00" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="3 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.oauth.com/#website","url":"https://www.oauth.com/","name":"OAuth 2.0 Simplified","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.oauth.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.oauth.com/oauth2-servers/pkce/authorization-request/#webpage","url":"https://www.oauth.com/oauth2-servers/pkce/authorization-request/","name":"Authorization Request - OAuth 2.0 Simplified","isPartOf":{"@id":"https://www.oauth.com/#website"},"datePublished":"2017-08-10T17:40:33+00:00","dateModified":"2021-12-16T22:56:30+00:00","description":"When the native app begins the authorization request, instead of immediately launching a browser, the client first creates what is known as a \"code","breadcrumb":{"@id":"https://www.oauth.com/oauth2-servers/pkce/authorization-request/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.oauth.com/oauth2-servers/pkce/authorization-request/"]}]},{"@type":"BreadcrumbList","@id":"https://www.oauth.com/oauth2-servers/pkce/authorization-request/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.oauth.com/"},{"@type":"ListItem","position":2,"name":"OAuth.com","item":"https://www.oauth.com/"},{"@type":"ListItem","position":3,"name":"Protecting Apps with PKCE","item":"https://www.oauth.com/oauth2-servers/pkce/"},{"@type":"ListItem","position":4,"name":"Authorization Request"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//www.oauth.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="OAuth 2.0 Simplified &raquo; Feed" href="https://www.oauth.com/feed/" />
+<link rel="shortcut icon" type="image/x-icon" href="https://www.oauth.com/wp-content/themes/oauthdotcom/favicon.ico" /><script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.oauth.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>
+	.themify_builder .wow { visibility: hidden; }
+	div:not(.caroufredsel_wrapper) > .themify_builder_slider > li:not(:first-child), .mfp-hide { display: none; }
+a.themify_lightbox, .module-gallery a, .gallery-icon, .themify_lightboxed_images .post a[href$="jpg"], .themify_lightboxed_images .post a[href$="gif"], .themify_lightboxed_images .post a[href$="png"], .themify_lightboxed_images .post a[href$="JPG"], .themify_lightboxed_images .post a[href$="GIF"], .themify_lightboxed_images .post a[href$="PNG"], .themify_lightboxed_images .post a[href$="jpeg"], .themify_lightboxed_images .post a[href$="JPEG"] { cursor:not-allowed; }
+	.themify_lightbox_loaded a.themify_lightbox, .themify_lightbox_loaded .module-gallery a, .themify_lightbox_loaded .gallery-icon { cursor:pointer; }
+	</style><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='themify-common-css'  href='https://www.oauth.com/wp-content/themes/themify-ultra/themify/css/themify.common.min.css?ver=4.7.7' type='text/css' media='all' />
+<meta name="themify-framework-css" data-href="https://www.oauth.com/wp-content/themes/themify-ultra/themify/css/themify.framework.min.css?ver=4.7.7" content="themify-framework-css" id="themify-framework-css" /><meta name="builder-styles-css" data-href="https://www.oauth.com/wp-content/themes/themify-ultra/themify/themify-builder/css/themify-builder-style.min.css?ver=4.7.7" content="builder-styles-css" id="builder-styles-css" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.oauth.com/wp-includes/css/dist/block-library/style.min.css?ver=6.0.3' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='theme-style-css'  href='https://www.oauth.com/wp-content/themes/themify-ultra/style.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-media-queries-css'  href='https://www.oauth.com/wp-content/themes/themify-ultra/media-queries.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ultra-header-css'  href='https://www.oauth.com/wp-content/themes/themify-ultra/styles/header-slide-out.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ultra-color-css'  href='https://www.oauth.com/wp-content/themes/themify-ultra/styles/theme-color-grey.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-child-css'  href='https://www.oauth.com/wp-content/themes/oauthdotcom/style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C600italic%2C700italic%2C400%2C300%2C600%2C700&#038;subset=latin&#038;ver=6.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fabric-master-css'  href='https://www.oauth.com/wp-content/themes/oauthdotcom/css/master.css?ver=6b3fdcf6dd3cb8565a44c5f9ee7664d1db16e916' type='text/css' media='all' />
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js?ver=2.2.4' id='jquery-js'></script>
+<link rel="https://api.w.org/" href="https://www.oauth.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.oauth.com/wp-json/wp/v2/pages/670" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.oauth.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.oauth.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 6.0.3" />
+<link rel='shortlink' href='https://www.oauth.com/?p=670' />
+<link rel="alternate" type="application/json+oembed" href="https://www.oauth.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.oauth.com%2Foauth2-servers%2Fpkce%2Fauthorization-request%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.oauth.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.oauth.com%2Foauth2-servers%2Fpkce%2Fauthorization-request%2F&#038;format=xml" />
+
+
+
+
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+	
+	<script type="text/javascript">
+	    var tf_mobile_menu_trigger_point = 1200;
+	</script>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+	@-webkit-keyframes themifyAnimatedBG {
+		0% { background-color: #33baab; }
+100% { background-color: #e33b9e; }
+50% { background-color: #4961d7; }
+33.3% { background-color: #2ea85c; }
+25% { background-color: #2bb8ed; }
+20% { background-color: #dd5135; }
+
+	}
+	@keyframes themifyAnimatedBG {
+		0% { background-color: #33baab; }
+100% { background-color: #e33b9e; }
+50% { background-color: #4961d7; }
+33.3% { background-color: #2ea85c; }
+25% { background-color: #2bb8ed; }
+20% { background-color: #dd5135; }
+
+	}
+	.themify_builder_row.animated-bg {
+		-webkit-animation: themifyAnimatedBG 30000ms infinite alternate;
+		animation: themifyAnimatedBG 30000ms infinite alternate;
+	}
+	</style>
+	    <script src="//use.typekit.net/ekm8nhh.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>    <script type="text/javascript">
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KXMLV58');
+</script>
+</head>
+
+<body class="page-template-default page page-id-670 page-child parent-pageid-668 themify-fw-4-7-7 themify-ultra-2-6-5 skin-default not-ie default_width sidebar-none no-home no-touch builder-parallax-scrolling-active ready-view header-slide-out fixed-header default theme-color-grey rss-off tile_enable  filter-hover-none filter-featured-only masonry-enabled">
+
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KXMLV58" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+	<script type="text/javascript">
+	function themifyMobileMenuTrigger(e) {
+		var w = document.body.clientWidth;
+		if( w > 0 && w <= tf_mobile_menu_trigger_point ) {
+			document.body.classList.add( 'mobile_menu_active' );
+		} else {
+			document.body.classList.remove( 'mobile_menu_active' );
+		}
+		
+	}
+	themifyMobileMenuTrigger();
+	var _init =function () {
+	    jQuery( window ).on('tfsmartresize.tf_mobile_menu', themifyMobileMenuTrigger );
+	    document.removeEventListener( 'DOMContentLoaded', _init, {once:true,passive:true} );
+	    _init=null;
+	};
+	document.addEventListener( 'DOMContentLoaded', _init, {once:true,passive:true} );
+</script>
+
+	<div id="pagewrap" class="hfeed site">
+
+					<div id="headerwrap"   >
+
+				
+				<a id="menu-icon" href="#mobile-menu"></a>
+
+				<header id="header" class="clearfix" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+
+					
+					<div id="site-logo">
+						<a href="https://developer.okta.com" title="Sponsored by Okta" target="_blank"></a>
+					</div>
+
+					<div class="header-bar">
+						<a href="https://www.oauth.com" id="home-link" title="OAuth 2.0 Simplified">
+							<img src="https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo.png" srcset="https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo.png 1x,
+						https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo@2x.png 2x" alt="OAuth 2.0 Servers" />
+						</a>
+					</div>
+
+
+					<!-- /.header-bar -->
+
+											<div id="mobile-menu" class="sidemenu sidemenu-off">
+
+															<div class="social-widget">
+																												
+																	</div>
+								<!-- /.social-widget -->
+							
+															<div id="searchform-wrap">
+									    <form method="get" id="searchform" action="https://www.oauth.com/">
+        <div class="oauth-search">
+            <i class="icon-clear-search">X</i>
+            <input type="text" name="s" id="s" value="" />
+        </div>
+    </form>								</div>
+								<!-- /searchform-wrap -->
+							
+															<nav id="main-nav-wrap" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+									<ul id="main-nav" class="main-nav clearfix"><li class="page_item page-item-6 page_item_has_children current_page_ancestor"><a href="https://www.oauth.com/">OAuth.com</a>
+<ul class='children'>
+	<li class="page_item page-item-2"><a href="https://www.oauth.com/oauth2-servers/background/">Background</a></li>
+	<li class="page_item page-item-914"><a href="https://www.oauth.com/oauth2-servers/getting-ready/" data-section="1">Getting Ready</a></li>
+	<li class="page_item page-item-896 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/accessing-data/" data-section="2">Accessing Data in an OAuth Server</a>
+	<ul class='children'>
+		<li class="page_item page-item-898"><a href="https://www.oauth.com/oauth2-servers/accessing-data/create-an-application/" data-section="2.1">Create an Application</a></li>
+		<li class="page_item page-item-903"><a href="https://www.oauth.com/oauth2-servers/accessing-data/setting-up-the-environment/" data-section="2.2">Setting up the Environment</a></li>
+		<li class="page_item page-item-907"><a href="https://www.oauth.com/oauth2-servers/accessing-data/authorization-request/" data-section="2.3">Authorization Request</a></li>
+		<li class="page_item page-item-910"><a href="https://www.oauth.com/oauth2-servers/accessing-data/obtaining-an-access-token/" data-section="2.4">Obtaining an Access Token</a></li>
+		<li class="page_item page-item-912"><a href="https://www.oauth.com/oauth2-servers/accessing-data/making-api-requests/" data-section="4.5">Making API Requests</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-28 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/signing-in-with-google/" data-section="3">Signing in with Google</a>
+	<ul class='children'>
+		<li class="page_item page-item-883"><a href="https://www.oauth.com/oauth2-servers/signing-in-with-google/create-an-application/" data-section="3.1">Create an Application</a></li>
+		<li class="page_item page-item-886"><a href="https://www.oauth.com/oauth2-servers/signing-in-with-google/setting-up-the-environment/" data-section="3.2">Setting up the Environment</a></li>
+		<li class="page_item page-item-888"><a href="https://www.oauth.com/oauth2-servers/signing-in-with-google/authorization-request/" data-section="3.3">Authorization Request</a></li>
+		<li class="page_item page-item-891"><a href="https://www.oauth.com/oauth2-servers/signing-in-with-google/getting-an-id-token/" data-section="3.4">Getting an ID Token</a></li>
+		<li class="page_item page-item-893"><a href="https://www.oauth.com/oauth2-servers/signing-in-with-google/verifying-the-user-info/" data-section="3.5">Verifying the User Info</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-95 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/server-side-apps/" data-section="4">Server-Side Apps</a>
+	<ul class='children'>
+		<li class="page_item page-item-865"><a href="https://www.oauth.com/oauth2-servers/server-side-apps/authorization-code/" data-section="4.1">Authorization Code Grant</a></li>
+		<li class="page_item page-item-869"><a href="https://www.oauth.com/oauth2-servers/server-side-apps/example-flow/" data-section="4.2">Example Flow</a></li>
+		<li class="page_item page-item-872"><a href="https://www.oauth.com/oauth2-servers/server-side-apps/possible-errors/" data-section="4.3">Possible Errors</a></li>
+		<li class="page_item page-item-874"><a href="https://www.oauth.com/oauth2-servers/server-side-apps/user-experience/" data-section="4.4">User Experience and Security Considerations</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-36 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/single-page-apps/" data-section="5">Single-Page Apps</a>
+	<ul class='children'>
+		<li class="page_item page-item-856"><a href="https://www.oauth.com/oauth2-servers/single-page-apps/authorization/" data-section="5.1">Authorization</a></li>
+		<li class="page_item page-item-850"><a href="https://www.oauth.com/oauth2-servers/single-page-apps/example-flow/" data-section="5.2">Example Flow</a></li>
+		<li class="page_item page-item-847"><a href="https://www.oauth.com/oauth2-servers/single-page-apps/implicit-flow/" data-section="5.3">Implicit Flow for Single-Page Apps</a></li>
+		<li class="page_item page-item-854"><a href="https://www.oauth.com/oauth2-servers/single-page-apps/security-considerations/" data-section="5.4">Security Considerations for Single-Page Apps</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-33 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/mobile-and-native-apps/" data-section="6">Mobile and Native Apps</a>
+	<ul class='children'>
+		<li class="page_item page-item-838"><a href="https://www.oauth.com/oauth2-servers/mobile-and-native-apps/authorization/" data-section="6.1">Authorization</a></li>
+		<li class="page_item page-item-841"><a href="https://www.oauth.com/oauth2-servers/mobile-and-native-apps/security-considerations/" data-section="6.2">Security Considerations</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-138 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/making-authenticated-requests/" data-section="7">Making Authenticated Requests</a>
+	<ul class='children'>
+		<li class="page_item page-item-833"><a href="https://www.oauth.com/oauth2-servers/making-authenticated-requests/refreshing-an-access-token/" data-section="7.1">Refresh Tokens</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-140 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/client-registration/" data-section="8">Client Registration</a>
+	<ul class='children'>
+		<li class="page_item page-item-142"><a href="https://www.oauth.com/oauth2-servers/client-registration/registering-new-application/" data-section="8.1">Registering a New Application</a></li>
+		<li class="page_item page-item-144"><a href="https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/" data-section="8.2">The Client ID and Secret</a></li>
+		<li class="page_item page-item-146"><a href="https://www.oauth.com/oauth2-servers/client-registration/deleting-applications-revoking-secrets/" data-section="8.3">Deleting Applications and Revoking Secrets</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-148 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/authorization/" data-section="9">Authorization</a>
+	<ul class='children'>
+		<li class="page_item page-item-161"><a href="https://www.oauth.com/oauth2-servers/authorization/the-authorization-request/" data-section="9.1">The Authorization Request</a></li>
+		<li class="page_item page-item-164"><a href="https://www.oauth.com/oauth2-servers/authorization/requiring-user-login/" data-section="9.2">Requiring User Login</a></li>
+		<li class="page_item page-item-166"><a href="https://www.oauth.com/oauth2-servers/authorization/the-authorization-interface/" data-section="9.3">The Authorization Interface</a></li>
+		<li class="page_item page-item-168"><a href="https://www.oauth.com/oauth2-servers/authorization/the-authorization-response/" data-section="9.4">The Authorization Response</a></li>
+		<li class="page_item page-item-170"><a href="https://www.oauth.com/oauth2-servers/authorization/security-considerations/" data-section="9.5">Security Considerations</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-174 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/scope/" data-section="10">Scope</a>
+	<ul class='children'>
+		<li class="page_item page-item-177"><a href="https://www.oauth.com/oauth2-servers/scope/defining-scopes/" data-section="10.1">Defining Scopes</a></li>
+		<li class="page_item page-item-179"><a href="https://www.oauth.com/oauth2-servers/scope/user-interface/" data-section="10.2">User Interface</a></li>
+		<li class="page_item page-item-181"><a href="https://www.oauth.com/oauth2-servers/scope/checkboxes/" data-section="10.3">Checkboxes</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-184 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/redirect-uris/" data-section="11">Redirect URLs</a>
+	<ul class='children'>
+		<li class="page_item page-item-186"><a href="https://www.oauth.com/oauth2-servers/redirect-uris/redirect-uri-registration/" data-section="11.1">Redirect URL Registration</a></li>
+		<li class="page_item page-item-188"><a href="https://www.oauth.com/oauth2-servers/redirect-uris/redirect-uris-native-apps/" data-section="11.2">Redirect URLs for Native Apps</a></li>
+		<li class="page_item page-item-190"><a href="https://www.oauth.com/oauth2-servers/redirect-uris/redirect-uri-validation/" data-section="11.3">Redirect URL Validation</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-194 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/access-tokens/" data-section="12">Access Tokens</a>
+	<ul class='children'>
+		<li class="page_item page-item-196"><a href="https://www.oauth.com/oauth2-servers/access-tokens/authorization-code-request/" data-section="12.1">Authorization Code Request</a></li>
+		<li class="page_item page-item-198"><a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/" data-section="12.2">Password Grant</a></li>
+		<li class="page_item page-item-200"><a href="https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/" data-section="12.3">Client Credentials</a></li>
+		<li class="page_item page-item-202"><a href="https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/" data-section="12.4">Access Token Response</a></li>
+		<li class="page_item page-item-204"><a href="https://www.oauth.com/oauth2-servers/access-tokens/self-encoded-access-tokens/" data-section="12.5">Self-Encoded Access Tokens</a></li>
+		<li class="page_item page-item-206"><a href="https://www.oauth.com/oauth2-servers/access-tokens/access-token-lifetime/" data-section="12.6">Access Token Lifetime</a></li>
+		<li class="page_item page-item-208"><a href="https://www.oauth.com/oauth2-servers/access-tokens/refreshing-access-tokens/" data-section="12.7">Refreshing Access Tokens</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-210 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/listing-authorizations/" data-section="13">Listing Authorizations</a>
+	<ul class='children'>
+		<li class="page_item page-item-212"><a href="https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/" data-section="13.1">Revoking Access</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-216"><a href="https://www.oauth.com/oauth2-servers/the-resource-server/" data-section="14">The Resource Server</a></li>
+	<li class="page_item page-item-608 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/oauth-native-apps/" data-section="15">OAuth for Native Apps</a>
+	<ul class='children'>
+		<li class="page_item page-item-614"><a href="https://www.oauth.com/oauth2-servers/oauth-native-apps/use-system-browser/" data-section="15.1">Use a System Browser</a></li>
+		<li class="page_item page-item-620"><a href="https://www.oauth.com/oauth2-servers/oauth-native-apps/redirect-urls-for-native-apps/" data-section="15.2">Redirect URLs for Native Apps</a></li>
+		<li class="page_item page-item-626"><a href="https://www.oauth.com/oauth2-servers/oauth-native-apps/pkce/" data-section="15.3">PKCE Extension</a></li>
+		<li class="page_item page-item-627"><a href="https://www.oauth.com/oauth2-servers/oauth-native-apps/checklist-server-support-native-apps/" data-section="15.4">Checklist for Server Support for Native Apps</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-640 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/device-flow/" data-section="16">OAuth for Browserless and Input-Constrained Devices</a>
+	<ul class='children'>
+		<li class="page_item page-item-643"><a href="https://www.oauth.com/oauth2-servers/device-flow/user-flow/" data-section="16.1">User Flow</a></li>
+		<li class="page_item page-item-656"><a href="https://www.oauth.com/oauth2-servers/device-flow/authorization-request/" data-section="16.2">Authorization Request</a></li>
+		<li class="page_item page-item-660"><a href="https://www.oauth.com/oauth2-servers/device-flow/token-request/" data-section="16.3">Token Request</a></li>
+		<li class="page_item page-item-662"><a href="https://www.oauth.com/oauth2-servers/device-flow/authorization-server-requirements/" data-section="16.4">Authorization Server Requirements</a></li>
+		<li class="page_item page-item-666"><a href="https://www.oauth.com/oauth2-servers/device-flow/security-considerations/" data-section="16.5">Security Considerations</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-668 page_item_has_children current_page_ancestor current_page_parent"><a href="https://www.oauth.com/oauth2-servers/pkce/" data-section="17">Protecting Apps with PKCE</a>
+	<ul class='children'>
+		<li class="page_item page-item-670 current_page_item"><a href="https://www.oauth.com/oauth2-servers/pkce/authorization-request/" data-section="17.1">Authorization Request</a></li>
+		<li class="page_item page-item-673"><a href="https://www.oauth.com/oauth2-servers/pkce/authorization-code-exchange/" data-section="17.2">Authorization Code Exchange</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-214"><a href="https://www.oauth.com/oauth2-servers/token-introspection-endpoint/" data-section="18">Token Introspection Endpoint</a></li>
+	<li class="page_item page-item-220"><a href="https://www.oauth.com/oauth2-servers/creating-documentation/" data-section="19">Creating Documentation</a></li>
+	<li class="page_item page-item-108"><a href="https://www.oauth.com/oauth2-servers/definitions/" data-section="20">Terminology Reference</a></li>
+	<li class="page_item page-item-136 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/" data-section="21">Differences Between OAuth 1 and 2</a>
+	<ul class='children'>
+		<li class="page_item page-item-225"><a href="https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/authentication-and-signatures/" data-section="21.1">Authentication and Signatures</a></li>
+		<li class="page_item page-item-227"><a href="https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/user-experience-alternative-token-issuance-options/" data-section="21.2">User Experience and Alternative Token Issuance Options</a></li>
+		<li class="page_item page-item-229"><a href="https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/performance-at-scale/" data-section="21.3">Performance at Scale</a></li>
+		<li class="page_item page-item-231"><a href="https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/bearer-tokens/" data-section="21.4">Bearer Tokens</a></li>
+		<li class="page_item page-item-233"><a href="https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/short-lived-tokens-long-lived-authorizations/" data-section="21.5">Short-lived tokens with Long-lived authorizations</a></li>
+		<li class="page_item page-item-235"><a href="https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/separation-of-roles/" data-section="21.6">Separation of Roles</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-676 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/openid-connect/" data-section="22">OpenID Connect</a>
+	<ul class='children'>
+		<li class="page_item page-item-678"><a href="https://www.oauth.com/oauth2-servers/openid-connect/authorization-vs-authentication/" data-section="22.1">Authorization vs Authentication</a></li>
+		<li class="page_item page-item-680"><a href="https://www.oauth.com/oauth2-servers/openid-connect/building-an-authentication-framework/" data-section="22.2">Building an Authentication Framework</a></li>
+		<li class="page_item page-item-682"><a href="https://www.oauth.com/oauth2-servers/openid-connect/id-tokens/" data-section="22.3">ID Tokens</a></li>
+		<li class="page_item page-item-684"><a href="https://www.oauth.com/oauth2-servers/openid-connect/summary/" data-section="22.4">Summary</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-686 page_item_has_children"><a href="https://www.oauth.com/oauth2-servers/indieauth/" data-section="23">IndieAuth</a>
+	<ul class='children'>
+		<li class="page_item page-item-738"><a href="https://www.oauth.com/oauth2-servers/indieauth/discovery/" data-section="23.1">Discovery</a></li>
+		<li class="page_item page-item-688"><a href="https://www.oauth.com/oauth2-servers/indieauth/sign-in/" data-section="23.2">IndieAuth Sign-In Workflow</a></li>
+		<li class="page_item page-item-690"><a href="https://www.oauth.com/oauth2-servers/indieauth/authorization/" data-section="23.3">IndieAuth Authorization Workflow</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-693"><a href="https://www.oauth.com/oauth2-servers/map-oauth-2-0-specs/" data-section="24">Map of OAuth 2.0 Specs</a></li>
+	<li class="page_item page-item-697"><a href="https://www.oauth.com/oauth2-servers/tools-and-libraries/" data-section="25">Tools and Libraries</a></li>
+	<li class="page_item page-item-715"><a href="https://www.oauth.com/oauth2-servers/appendix/">Appendix</a></li>
+</ul>
+</li>
+</ul>									<!-- /#main-nav -->
+								</nav>
+								<!-- /#main-nav-wrap -->
+							
+																							<!-- /header-widgets -->
+							
+							<a id="menu-icon-close" href="#">
+								<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="OAuth---Table-of-Contents-Menu" transform="translate(-1292.000000, -30.000000)" fill-rule="nonzero" fill="#333333">
+            <g id="ToC-Menu-Open" transform="translate(993.000000, -16.000000)">
+                <g id="Close" transform="translate(299.000000, 46.000000)">
+                    <path d="M15.9149259,8.53193792 L-1.05529018,8.53193792 C-1.56341203,8.53193792 -1.97626292,8.12026136 -1.97626292,7.61096518 L-1.97626292,7.24987497 C-1.97626292,6.74175311 -1.56458636,6.32890222 -1.05529018,6.32890222 L15.9161303,6.32890222 C16.4242522,6.32890222 16.8371031,6.74057879 16.8371031,7.24987497 L16.8371031,7.61096518 C16.8359266,8.12026136 16.4242522,8.53193792 15.914956,8.53193792 L15.9149259,8.53193792 Z" id="Shape" transform="translate(7.430420, 7.430420) rotate(-315.000000) translate(-7.430420, -7.430420) "></path>
+                    <path d="M15.9149259,8.53193792 L-1.05529018,8.53193792 C-1.56341203,8.53193792 -1.97626292,8.12026136 -1.97626292,7.61096518 L-1.97626292,7.24987497 C-1.97626292,6.74175311 -1.56458636,6.32890222 -1.05529018,6.32890222 L15.9161303,6.32890222 C16.4242522,6.32890222 16.8371031,6.74057879 16.8371031,7.24987497 L16.8371031,7.61096518 C16.8359266,8.12026136 16.4242522,8.53193792 15.914956,8.53193792 L15.9149259,8.53193792 Z" id="Shape-Copy" transform="translate(7.430420, 7.430420) scale(-1, 1) rotate(-315.000000) translate(-7.430420, -7.430420) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>							</a>
+						</div>
+						<!-- /#mobile-menu -->
+					
+					
+					
+				</header>
+				<!-- /#header -->
+
+				
+			</div>
+			<!-- /#headerwrap -->
+		
+		<div id="body" class="clearfix">
+
+			
+
+
+	<!-- valprop -->
+	<div id="valprop">
+		<header class="valprop-content">
+			<h1 class="page-title">
+				Authorization Request			</h1>
+		</header>
+
+		<span class="section-number">17.1</span>	</div>
+	<!-- /valprop -->
+
+
+
+<!-- layout-container -->
+<div id="layout" class="pagewidth-narrow clearfix">
+
+		<!-- content -->
+	<div id="content" class="clearfix">
+    	
+				
+		
+							<div id="page-670" class="type-page">
+
+			<!-- page-title -->
+			                <time datetime="2017-08-10"></time>
+				<h1 class="page-title">
+								</h1>
+
+				
+						<!-- /page-title -->
+
+			<div class="page-content entry-content">
+
+				
+				
+<p>When the native app begins the authorization request, instead of immediately launching a browser, the client first creates what is known as a &#8220;<i>code verifier</i>&#8220;. This is a cryptographically random string using the characters <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, and the punctuation characters <code>-._~</code> (hyphen, period, underscore, and tilde), between 43 and 128 characters long.</p>
+<p>Once the app has generated the code verifier, it uses that to derive the <i>code challenge</i>. For devices that can perform a SHA256 hash, the code challenge is a Base64-URL-encoded string of the SHA256 hash of the code verifier. Clients that do not have the ability to perform a SHA256 hash are permitted to use the plain code verifier string as the challenge, although that provides less security benefits so should really only be used if absolutely necessary.</p>
+<p>Base64-URL-encoding is a minor variation on the typical Base64 encoding method. It starts with the same Base64-encoding method available in most programming languages, but uses URL-safe characters instead. You can implement a Base64-URL-encoding method by taking a Base64-encoded string and making the following modifications to the string: Take the Base64-encoded string, and change <code>+</code> to <code>-</code>, and <code>/</code> to <code>_</code>, then trim the trailing <code>=</code> from the end.</p>
+<p><b>PHP</b></p>
+<pre class="brush: php; title: ; notranslate" title="">function base64_urlencode($str) {
+  return rtrim(strtr(base64_encode($hash), '+/', '-_'), '=');
+}</pre>
+<p><b>JavaScript</b></p>
+<pre class="brush: jscript; title: ; notranslate" title="">function base64_urlencode(str) {
+  return btoa(String.fromCharCode.apply(null, 
+    new Uint8Array(str)))
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/, '');
+}</pre>
+<p>Now that the client has a <i>code challenge</i> string, it includes that and a parameter that indicates which method was used to generate the challenge (plain or S256) along with the standard parameters of the authorization request. This means a complete authorization request will include the following parameters.</p>
+<ul>
+<li><b>response_type=code</b> &#8211; indicates that your server expects to receive an authorization code</li>
+<li><b>client_id=</b> &#8211; The client ID you received when you first created the application</li>
+<li><b>redirect_uri=</b> &#8211; Indicates the URL to return the user to after authorization is complete, such as org.example.app://redirect</li>
+<li><b>state=1234zyx</b> &#8211; A random string generated by your application, which you&#8217;ll verify later</li>
+<li><b>code_challenge=XXXXXXXXX</b> &#8211; The code challenge generated as previously described</li>
+<li><b>code_challenge_method=S256</b> &#8211; either <code>plain</code> or <code>S256</code>, depending on whether the challenge is the plain verifier string or the SHA256 hash of the string.</li>
+</ul>
+<p>The authorization server should recognize the <code>code_challenge</code> parameter in the request, and associate that with the authorization code it generates. Either store this in the database along with the authorization code, or if you&#8217;re using self-encoded authorization codes then it can be included in the code itself. (See <a href="/oauth2-servers/authorization/the-authorization-response/" class="section">The Authorization Response</a> for details.) The server returns the authorization code as normal, and does not include the challenge in the data returned.</p>
+<h3>Error Response</h3>
+<p>The authorization server can require that public clients must use the PKCE extension. This is really the only way to allow native apps to have a secure authorization flow without using the client secret, especially without the redirect URI security that&#8217;s available with web-based clients. Since the authorization server should know that a specific client ID corresponds to a public client, it can deny authorization requests for public clients that do not contain a code challenge.</p>
+<p>If the authorization server requires public clients to use PKCE, and the authorization request is missing the code challenge, then the server should return the error response with <code>error=invalid_request</code> and the <code>error_description</code> or <code>error_uri</code> should explain the nature of the error.</p>
+<div id="themify_builder_content-670" data-postid="670" class="themify_builder_content themify_builder_content-670 themify_builder">
+    </div>
+<!-- /themify_builder_content -->
+				
+				<!-- comments -->
+								<!-- /comments -->
+
+			</div>
+			<!-- /.post-content -->
+
+			</div><!-- /.type-page -->
+		
+				
+			</div>
+	<!-- /content -->
+    
+
+	
+		<nav id="page">
+			<div class="alignleft">
+				<a href="https://www.oauth.com/oauth2-servers/pkce/"><span>Previous Chapter</span>Protecting Apps with PKCE</a>			</div>
+			<div class="alignright">
+				<a href="https://www.oauth.com/oauth2-servers/pkce/authorization-code-exchange/"><span>Next Chapter</span>Authorization Code Exchange</a>			</div>
+		</nav>
+
+	
+
+
+</div>
+<!-- /layout-container -->
+
+
+							</div>
+			<!-- /body -->
+
+							<div id="footerwrap"   >
+
+					
+					<footer id="footer" class="pagewidth clearfix" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+
+						
+						<div class="Row u-Flex u-Stretch">
+
+							<div class="no-hassle Column--6 Column--medium-12">
+								<h3>Want to implement OAuth 2.0 without the hassle?</h3>
+								<p>We've built API access management as a service that is secure, scalable, and always on, so you can ship a more secure product, faster.</p>
+								<a class="Button" href="http://developer.okta.com/signup" target="_blank" rel="noopener noreferrer">Secure your APIs</a>
+							</div>
+
+							<div class="brought-by Column--6 Column--medium-12">
+								<a href="https://developer.okta.com/" target="_blank">
+									OAuth.com is brought to you by the team at
+									<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88.8 35.82"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{clip-rule:evenodd;}.cls-3{clip-path:url(#clip-path);}.cls-4{clip-path:url(#clip-path-2);}.cls-5{fill:#c2c3c3;}.cls-6{clip-path:url(#clip-path-3);}.cls-7{clip-path:url(#clip-path-5);}.cls-8{clip-path:url(#clip-path-7);}</style><clipPath id="clip-path" transform="translate(5 4.91)"><path class="cls-1" d="M9.91,6.57A9.78,9.78,0,0,0,0,16.21a9.78,9.78,0,0,0,9.91,9.64,9.78,9.78,0,0,0,9.91-9.64A9.78,9.78,0,0,0,9.91,6.57M9.91,21a4.82,4.82,0,1,1,0-9.64,4.82,4.82,0,1,1,0,9.64"/></clipPath><clipPath id="clip-path-2" transform="translate(5 4.91)"><rect class="cls-2" x="-121" y="-359" width="1440" height="3536"/></clipPath><clipPath id="clip-path-3" transform="translate(5 4.91)"><path class="cls-1" d="M27.32,19.44a.88.88,0,0,1,1.5-.59c2.47,2.46,6.58,6.67,6.6,6.69a.65.65,0,0,0,.35.22,1.69,1.69,0,0,0,.42,0h4.47a.84.84,0,0,0,.67-1.36l-7.41-7.39-.39-.39c-.84-1-.75-1.36.21-2.35l5.89-6.36A.83.83,0,0,0,39,6.6h-4a1.43,1.43,0,0,0-.39,0,.83.83,0,0,0-.39.22l-5.27,5.52a.89.89,0,0,1-1.53-.58V.86a.78.78,0,0,0-.85-.77H23.16a.76.76,0,0,0-.86.7V25.05c0,.56.48.71.86.71h3.31a.79.79,0,0,0,.85-.73V19.44Z"/></clipPath><clipPath id="clip-path-5" transform="translate(5 4.91)"><path class="cls-1" d="M54.36,24.93,54,21.7a.79.79,0,0,0-.92-.68,5.08,5.08,0,0,1-.77.06,4.89,4.89,0,0,1-4.94-4.56c0-.09,0-.17,0-.26V12.33a.91.91,0,0,1,.92-.93h4.44a.8.8,0,0,0,.78-.83V7.51a.83.83,0,0,0-.74-.91H48.32a.89.89,0,0,1-.94-.87V.85a.79.79,0,0,0-.86-.76h-3.3a.74.74,0,0,0-.81.74s0,15.61,0,15.7a9.79,9.79,0,0,0,9.92,9.38,10.17,10.17,0,0,0,1.32-.09.82.82,0,0,0,.72-.89"/></clipPath><clipPath id="clip-path-7" transform="translate(5 4.91)"><path class="cls-1" d="M78.23,20.89c-2.81,0-3.23-1-3.23-4.64,0,0,0,0,0,0V7.42a.83.83,0,0,0-.86-.82H70.82a.85.85,0,0,0-.86.82v.41a10.08,10.08,0,0,0-4.89-1.26,9.78,9.78,0,0,0-9.91,9.64,9.78,9.78,0,0,0,9.91,9.64,10,10,0,0,0,6.44-2.31,5.4,5.4,0,0,0,4.77,2.31c.4,0,2.52.07,2.52-.89V21.53a.62.62,0,0,0-.57-.64M65.08,21a4.82,4.82,0,1,1,5-4.82,4.89,4.89,0,0,1-5,4.82"/></clipPath></defs><title>okta_logo</title><g class="cls-3"><g class="cls-4"><rect class="cls-5" y="6.48" width="29.82" height="29.28"/></g></g><g class="cls-6"><g class="cls-4"><rect class="cls-5" x="22.3" width="29.22" height="35.71"/></g></g><g class="cls-7"><g class="cls-4"><rect class="cls-5" x="42.4" width="21.96" height="35.82"/></g></g><g class="cls-8"><g class="cls-4"><rect class="cls-5" x="55.17" y="6.48" width="33.64" height="29.28"/></g></g></svg>								</a>
+							</div>
+
+						</div>
+
+						
+					</footer>
+					<!-- /#footer -->
+
+					
+				</div>
+				<!-- /#footerwrap -->
+			
+		</div>
+		<!-- /#pagewrap -->
+
+		
+		<!-- SCHEMA BEGIN --><script type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"WebPage","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.oauth.com\/oauth2-servers\/pkce\/authorization-request\/"},"headline":"Authorization Request","datePublished":"2017-08-10T10:40:33-07:00","dateModified":"2017-08-10T10:40:33-07:00","description":""}]</script><!-- /SCHEMA END -->		<!-- wp_footer -->
+		
+
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b' id='syntaxhighlighter-core-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0.9b' id='syntaxhighlighter-brush-as3-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushArduino.js?ver=3.0.9b' id='syntaxhighlighter-brush-arduino-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.9b' id='syntaxhighlighter-brush-bash-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0.9b' id='syntaxhighlighter-brush-coldfusion-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602' id='syntaxhighlighter-brush-clojure-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b' id='syntaxhighlighter-brush-cpp-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.9b' id='syntaxhighlighter-brush-csharp-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0.9b' id='syntaxhighlighter-brush-css-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0.9b' id='syntaxhighlighter-brush-delphi-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0.9b' id='syntaxhighlighter-brush-diff-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0.9b' id='syntaxhighlighter-brush-erlang-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003' id='syntaxhighlighter-brush-fsharp-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGo.js?ver=3.0.9b' id='syntaxhighlighter-brush-go-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0.9b' id='syntaxhighlighter-brush-groovy-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushHaskell.js?ver=3.0.9b' id='syntaxhighlighter-brush-haskell-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9b' id='syntaxhighlighter-brush-java-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0.9b' id='syntaxhighlighter-brush-javafx-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b' id='syntaxhighlighter-brush-jscript-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613' id='syntaxhighlighter-brush-latex-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209' id='syntaxhighlighter-brush-matlabkey-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207' id='syntaxhighlighter-brush-objc-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0.9b' id='syntaxhighlighter-brush-perl-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b' id='syntaxhighlighter-brush-php-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.9b' id='syntaxhighlighter-brush-plain-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0.9b' id='syntaxhighlighter-brush-powershell-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0.9b' id='syntaxhighlighter-brush-python-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919' id='syntaxhighlighter-brush-r-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0.9b' id='syntaxhighlighter-brush-ruby-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0.9b' id='syntaxhighlighter-brush-scala-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0.9b' id='syntaxhighlighter-brush-sql-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSwift.js?ver=3.0.9b' id='syntaxhighlighter-brush-swift-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0.9b' id='syntaxhighlighter-brush-vb-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b' id='syntaxhighlighter-brush-xml-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushYaml.js?ver=3.0.9b' id='syntaxhighlighter-brush-yaml-js'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "https://www.oauth.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeMidnight.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['gutter'] = false;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type='text/javascript' id='themify-main-script-js-extra'>
+/* <![CDATA[ */
+var themify_vars = {"version":"4.7.7","url":"https:\/\/www.oauth.com\/wp-content\/themes\/themify-ultra\/themify","wp":"6.0.3","map_key":null,"bing_map_key":null,"includesURL":"https:\/\/www.oauth.com\/wp-includes\/","isCached":"disable","commentUrl":"","minify":{"css":{"themify-icons":1,"lightbox":1,"main":1,"themify-builder-style":1},"js":{"backstretch.themify-version":1,"bigvideo":1,"themify.dropdown":1,"themify.mega-menu":1,"themify.builder.script":1,"themify.scroll-highlight":1,"themify-youtube-bg":1,"themify-ticks":1}},"media":{"css":{"wp-mediaelement":{"src":"https:\/\/www.oauth.com\/wp-includes\/js\/mediaelement\/wp-mediaelement.min.css","v":false},"mediaelement":{"src":"https:\/\/www.oauth.com\/wp-includes\/js\/mediaelement\/mediaelementplayer-legacy.min.css","v":"4.2.16"}},"_wpmejsSettings":"var _wpmejsSettings = {\"pluginPath\":\"\\\/wp-includes\\\/js\\\/mediaelement\\\/\",\"classPrefix\":\"mejs-\",\"stretching\":\"responsive\"};","js":{"mediaelement-core":{"src":"https:\/\/www.oauth.com\/wp-includes\/js\/mediaelement\/mediaelement-and-player.min.js","v":"4.2.16","extra":{"before":[false,"var mejsL10n = {\"language\":\"en\",\"strings\":{\"mejs.download-file\":\"Download File\",\"mejs.install-flash\":\"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\\\/\\\/get.adobe.com\\\/flashplayer\\\/\",\"mejs.fullscreen\":\"Fullscreen\",\"mejs.play\":\"Play\",\"mejs.pause\":\"Pause\",\"mejs.time-slider\":\"Time Slider\",\"mejs.time-help-text\":\"Use Left\\\/Right Arrow keys to advance one second, Up\\\/Down arrows to advance ten seconds.\",\"mejs.live-broadcast\":\"Live Broadcast\",\"mejs.volume-help-text\":\"Use Up\\\/Down Arrow keys to increase or decrease volume.\",\"mejs.unmute\":\"Unmute\",\"mejs.mute\":\"Mute\",\"mejs.volume-slider\":\"Volume Slider\",\"mejs.video-player\":\"Video Player\",\"mejs.audio-player\":\"Audio Player\",\"mejs.captions-subtitles\":\"Captions\\\/Subtitles\",\"mejs.captions-chapters\":\"Chapters\",\"mejs.none\":\"None\",\"mejs.afrikaans\":\"Afrikaans\",\"mejs.albanian\":\"Albanian\",\"mejs.arabic\":\"Arabic\",\"mejs.belarusian\":\"Belarusian\",\"mejs.bulgarian\":\"Bulgarian\",\"mejs.catalan\":\"Catalan\",\"mejs.chinese\":\"Chinese\",\"mejs.chinese-simplified\":\"Chinese (Simplified)\",\"mejs.chinese-traditional\":\"Chinese (Traditional)\",\"mejs.croatian\":\"Croatian\",\"mejs.czech\":\"Czech\",\"mejs.danish\":\"Danish\",\"mejs.dutch\":\"Dutch\",\"mejs.english\":\"English\",\"mejs.estonian\":\"Estonian\",\"mejs.filipino\":\"Filipino\",\"mejs.finnish\":\"Finnish\",\"mejs.french\":\"French\",\"mejs.galician\":\"Galician\",\"mejs.german\":\"German\",\"mejs.greek\":\"Greek\",\"mejs.haitian-creole\":\"Haitian Creole\",\"mejs.hebrew\":\"Hebrew\",\"mejs.hindi\":\"Hindi\",\"mejs.hungarian\":\"Hungarian\",\"mejs.icelandic\":\"Icelandic\",\"mejs.indonesian\":\"Indonesian\",\"mejs.irish\":\"Irish\",\"mejs.italian\":\"Italian\",\"mejs.japanese\":\"Japanese\",\"mejs.korean\":\"Korean\",\"mejs.latvian\":\"Latvian\",\"mejs.lithuanian\":\"Lithuanian\",\"mejs.macedonian\":\"Macedonian\",\"mejs.malay\":\"Malay\",\"mejs.maltese\":\"Maltese\",\"mejs.norwegian\":\"Norwegian\",\"mejs.persian\":\"Persian\",\"mejs.polish\":\"Polish\",\"mejs.portuguese\":\"Portuguese\",\"mejs.romanian\":\"Romanian\",\"mejs.russian\":\"Russian\",\"mejs.serbian\":\"Serbian\",\"mejs.slovak\":\"Slovak\",\"mejs.slovenian\":\"Slovenian\",\"mejs.spanish\":\"Spanish\",\"mejs.swahili\":\"Swahili\",\"mejs.swedish\":\"Swedish\",\"mejs.tagalog\":\"Tagalog\",\"mejs.thai\":\"Thai\",\"mejs.turkish\":\"Turkish\",\"mejs.ukrainian\":\"Ukrainian\",\"mejs.vietnamese\":\"Vietnamese\",\"mejs.welsh\":\"Welsh\",\"mejs.yiddish\":\"Yiddish\"}};"]}},"mediaelement-migrate":{"src":"https:\/\/www.oauth.com\/wp-includes\/js\/mediaelement\/mediaelement-migrate.min.js","v":false,"extra":""}}},"scrollTo":null};
+var tbLocalScript = {"ajaxurl":"https:\/\/www.oauth.com\/wp-admin\/admin-ajax.php","isAnimationActive":"1","isParallaxActive":"1","isScrollEffectActive":"1","isStickyScrollActive":"1","animationInviewSelectors":[".module.wow",".module_row.wow",".builder-posts-wrap > .post.wow"],"backgroundSlider":{"autoplay":5000},"animationOffset":"100","videoPoster":"https:\/\/www.oauth.com\/wp-content\/themes\/themify-ultra\/themify\/themify-builder\/img\/blank.png","backgroundVideoLoop":"yes","builder_url":"https:\/\/www.oauth.com\/wp-content\/themes\/themify-ultra\/themify\/themify-builder","framework_url":"https:\/\/www.oauth.com\/wp-content\/themes\/themify-ultra\/themify","version":"4.7.7","fullwidth_support":"","fullwidth_container":"body","loadScrollHighlight":"1","addons":[],"breakpoints":{"tablet_landscape":[769,"1024"],"tablet":[681,"768"],"mobile":"480"},"ticks":{"tick":30,"ajaxurl":"https:\/\/www.oauth.com\/wp-admin\/admin-ajax.php","postID":670},"cf_api_url":"https:\/\/www.oauth.com\/?tb_load_cf=","emailSub":"Check this out!"};
+var themifyScript = {"lightbox":{"lightboxSelector":".themify_lightbox","lightboxOn":true,"lightboxContentImages":false,"lightboxContentImagesSelector":"","theme":"pp_default","social_tools":false,"allow_resize":true,"show_title":false,"overlay_gallery":false,"screenWidthNoLightbox":600,"deeplinking":false,"contentImagesAreas":"","gallerySelector":".gallery-icon > a","lightboxGalleryOn":true},"lightboxContext":"body"};
+var tbScrollHighlight = {"fixedHeaderSelector":"#headerwrap.fixed-header","speed":"900","navigation":"#main-nav, .module-menu .ui.nav","scrollOffset":"-5","scroll":"internal"};
+/* ]]> */
+</script>
+<script type='text/javascript' defer="defer" src='https://www.oauth.com/wp-content/themes/themify-ultra/themify/js/main.min.js?ver=4.7.7' id='themify-main-script-js'></script>
+<script type='text/javascript' defer="defer" src='https://www.oauth.com/wp-content/themes/themify-ultra/themify/js/themify.sidemenu.min.js?ver=1.0.0' id='slide-nav-js'></script>
+<script type='text/javascript' id='theme-script-js-extra'>
+/* <![CDATA[ */
+var themifyScript = {"themeURI":"https:\/\/www.oauth.com\/wp-content\/themes\/themify-ultra","lightbox":{"lightboxSelector":".themify_lightbox","lightboxOn":true,"lightboxContentImages":false,"lightboxContentImagesSelector":"","theme":"pp_default","social_tools":false,"allow_resize":true,"show_title":false,"overlay_gallery":false,"screenWidthNoLightbox":600,"deeplinking":false,"contentImagesAreas":"","gallerySelector":".gallery-icon > a","lightboxGalleryOn":true},"fixedHeader":"fixed-header","sticky_header":"","ajax_nonce":"0376110113","ajax_url":"https:\/\/www.oauth.com\/wp-admin\/admin-ajax.php","parallaxHeader":"1","pageLoaderEffect":"","infiniteEnable":"0","fullPageScroll":"","shop_masonry":"no","responsiveBreakpoints":{"tablet_landscape":"1024","tablet":"768","mobile":"480"}};
+/* ]]> */
+</script>
+<script type='text/javascript' defer="defer" src='https://www.oauth.com/wp-content/themes/themify-ultra/js/themify.script.min.js?ver=1.0.0' id='theme-script-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/themes/oauthdotcom/js/master.js?ver=5a2639f42501af84abfd82f346cc51eae7a90995' id='fabric-master-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/themes/oauthdotcom/js/cookie.js?ver=02fc4fe91fdd37432e130857ad5ada2a84525a13' id='playground-cookie-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/themes/oauthdotcom/js/crypto.js?ver=b1999063286ff48e2dfaeed2107d9f427c8506d8' id='playground-crypto-js'></script>
+<script type='text/javascript' src='https://www.oauth.com/wp-content/themes/oauthdotcom/js/common.js?ver=149596cc0c6824a0e1eff9271ad09514046367b2' id='playground-common-js'></script>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7fe4a5104e","applicationID":"22011134","transactionName":"ZVEEZBAFDUpTABFfDlwbJ1MWDQxXHRMEUQQ=","queueTime":0,"applicationTime":226,"atts":"SRYHElgfHkQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
