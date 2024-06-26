@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OAuth 2.0 Playground</title>
+  <script src="//use.typekit.net/ekm8nhh.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+  <link rel="stylesheet" href="assets/bulma.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-head">
+      <div class="container">
+        <div class="header-bar">
+          <a href="https://www.oauth.com/" id="home-link" title="OAuth 2.0 Servers">
+            <img src="https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo.png" srcset="https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo.png 1x,
+            https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo@2x.png 2x" alt="OAuth 2.0 Servers">
+          </a>
+        </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <div class="level-item">
+              <div id="site-logo">
+                <a href="https://developer.okta.com" title="Sponsored by Okta" target="_blank"></a>
+              </div>
+
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item" style="margin-right:0;padding-right:0;">
+              <a href="https://www.oauth.com/playground/" class="nav-docs-return">OAuth Playground &rarr;</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="hero-body small">
+      <div class="container">
+        <h1 class="title has-text-centered">
+          OAuth 2.0 Playground
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="padding: 1em 0;">
+
+      <h1 class="title">Client Registration</h1>
+
+      <div>
+        <p>In order to use an OAuth API, you'll need to first register your application. Typically this involves setting up a developer account at the service, then answering some questions about your application, uploading a logo, etc.</p>
+        <div class="hide-when-registered">
+          <p>For the purposes of this demo, we don't require that you sign up for an account. Instead, you can click "Register" below, and we will register a client automatically.</p>
+          <p>This will create an application, register the redirect URI, as well as create a user account you can use for testing.</p>
+          <p><a href="#" class="register-new is-primary button">Register</a></p>
+          <p class="hidden register-help">Please wait... we are registering a client and creating a user. This can take some time to complete.</p>
+        </div>
+        <div class="hidden already-registered">
+          <p>It looks like you've been here before! You've already registered a client and created a user account. You can review the info below. Please <b>save the user login and password below</b>, since you'll need those in order to authenticate as that user during the OAuth flow!</p>
+          <p><a href="#" class="view-registration is-primary button">View Registration Info</a></p>
+        </div>
+      </div>
+
+      <div class="hidden error">
+        <h2 class="title">Error</h2>
+        <p class="description"></p>
+      </div>
+
+      <div class="modal" id="client-registration-modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <h3 class="modal-card-title">Client Registration</h3>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+
+            <div class="hidden success">
+              <h3 class="title">Great!</h3>
+              <p>Great! A new OAuth 2.0 client was created for you along with a user account. You can see the registration info below. This information is stored in a cookie in your browser. <b>Save the user login and password</b>, since you'll need those in order to authenticate as that user during the OAuth flow!</p>
+            </div>
+
+            <h2 class="title">Client Registration</h2>
+
+            <table class="table" width="100%">
+              <tr>
+                <td>client_id</td>
+                <td><a class="button no-border is-loading hidden"></a><span class="client-id"></span></td>
+              </tr>
+              <tr>
+                <td>client_secret</td>
+                <td><a class="button no-border is-loading hidden"></a><span class="client-secret"></span></td>
+              </tr>
+            </table>
+
+            <h2 class="title">User Account</h2>
+
+            <table class="table" width="100%">
+              <tr>
+                <td>login</td>
+                <td><a class="button no-border is-loading hidden"></a><span class="user-login"></span></td>
+              </tr>
+              <tr>
+                <td>password</td>
+                <td><a class="button no-border is-loading hidden"></a><span class="user-password"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="#" id="open-userinfo">open in new window</a></td>
+              </tr>
+            </table>
+          </section>
+          <footer class="modal-card-foot">
+            <p class="registration-still-in-progress hidden">Hold tight, we're still waiting for the authorization server...</p>
+            <a href="#" class="continue is-primary button hidden">Continue</a>
+            <a href="#" class="close button hidden">Close</a>
+            <a href="#" class="reset-session is-danger button">Reset</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <p class=""><a href="index.html">&larr; Back to Flows</a></p>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content">
+        <div class="columns">
+          <div class="column">
+            <h4>Want to implement OAuth 2.0 without the hassle?</h4>
+            <p>We've built API access management as a service that is secure, scalable, and always on, so you can ship a more secure product, faster.</p>
+            <a class="button is-link" href="http://developer.okta.com/" target="_blank" rel="noopener noreferrer">Secure your APIs</a>
+          </div>
+          <div class="column">
+            <div class="brought-by">
+              <a href="https://developer.okta.com" target="_blank" class="footer-logo">
+                OAuth.com is brought to you by the team at
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88.8 35.82"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{clip-rule:evenodd;}.cls-3{clip-path:url(#clip-path);}.cls-4{clip-path:url(#clip-path-2);}.cls-5{fill:#007dc1;}.cls-6{clip-path:url(#clip-path-3);}.cls-7{clip-path:url(#clip-path-5);}.cls-8{clip-path:url(#clip-path-7);}</style><clipPath id="clip-path" transform="translate(5 4.91)"><path class="cls-1" d="M9.91,6.57A9.78,9.78,0,0,0,0,16.21a9.78,9.78,0,0,0,9.91,9.64,9.78,9.78,0,0,0,9.91-9.64A9.78,9.78,0,0,0,9.91,6.57M9.91,21a4.82,4.82,0,1,1,0-9.64,4.82,4.82,0,1,1,0,9.64"></path></clipPath><clipPath id="clip-path-2" transform="translate(5 4.91)"><rect class="cls-2" x="-121" y="-359" width="1440" height="3536"></rect></clipPath><clipPath id="clip-path-3" transform="translate(5 4.91)"><path class="cls-1" d="M27.32,19.44a.88.88,0,0,1,1.5-.59c2.47,2.46,6.58,6.67,6.6,6.69a.65.65,0,0,0,.35.22,1.69,1.69,0,0,0,.42,0h4.47a.84.84,0,0,0,.67-1.36l-7.41-7.39-.39-.39c-.84-1-.75-1.36.21-2.35l5.89-6.36A.83.83,0,0,0,39,6.6h-4a1.43,1.43,0,0,0-.39,0,.83.83,0,0,0-.39.22l-5.27,5.52a.89.89,0,0,1-1.53-.58V.86a.78.78,0,0,0-.85-.77H23.16a.76.76,0,0,0-.86.7V25.05c0,.56.48.71.86.71h3.31a.79.79,0,0,0,.85-.73V19.44Z"></path></clipPath><clipPath id="clip-path-5" transform="translate(5 4.91)"><path class="cls-1" d="M54.36,24.93,54,21.7a.79.79,0,0,0-.92-.68,5.08,5.08,0,0,1-.77.06,4.89,4.89,0,0,1-4.94-4.56c0-.09,0-.17,0-.26V12.33a.91.91,0,0,1,.92-.93h4.44a.8.8,0,0,0,.78-.83V7.51a.83.83,0,0,0-.74-.91H48.32a.89.89,0,0,1-.94-.87V.85a.79.79,0,0,0-.86-.76h-3.3a.74.74,0,0,0-.81.74s0,15.61,0,15.7a9.79,9.79,0,0,0,9.92,9.38,10.17,10.17,0,0,0,1.32-.09.82.82,0,0,0,.72-.89"></path></clipPath><clipPath id="clip-path-7" transform="translate(5 4.91)"><path class="cls-1" d="M78.23,20.89c-2.81,0-3.23-1-3.23-4.64,0,0,0,0,0,0V7.42a.83.83,0,0,0-.86-.82H70.82a.85.85,0,0,0-.86.82v.41a10.08,10.08,0,0,0-4.89-1.26,9.78,9.78,0,0,0-9.91,9.64,9.78,9.78,0,0,0,9.91,9.64,10,10,0,0,0,6.44-2.31,5.4,5.4,0,0,0,4.77,2.31c.4,0,2.52.07,2.52-.89V21.53a.62.62,0,0,0-.57-.64M65.08,21a4.82,4.82,0,1,1,5-4.82,4.89,4.89,0,0,1-5,4.82"></path></clipPath></defs><title>okta_logo</title><g class="cls-3"><g class="cls-4"><rect class="cls-5" y="6.48" width="29.82" height="29.28"></rect></g></g><g class="cls-6"><g class="cls-4"><rect class="cls-5" x="22.3" width="29.22" height="35.71"></rect></g></g><g class="cls-7"><g class="cls-4"><rect class="cls-5" x="42.4" width="21.96" height="35.82"></rect></g></g><g class="cls-8"><g class="cls-4"><rect class="cls-5" x="55.17" y="6.48" width="33.64" height="29.28"></rect></g></g></svg>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/jquery-3.2.1.min.js"></script>
+  <script src="assets/cookie.js"></script>
+  <script src="assets/crypto.js"></script>
+  <script src="assets/common.js"></script>
+  <script>
+    $(function(){
+
+      var params = new URLSearchParams(location.search.slice(1));
+
+      initializeClient(function(){
+        $(".reset-session").addClass("hidden");
+      }, function(){
+        $(".hide-when-registered").addClass("hidden");
+        $(".already-registered").removeClass("hidden");
+        $(".register-new").addClass("hidden");
+        if(getReturnTo()) {
+          $(".continue").attr("href", getReturnTo()).removeClass("hidden");
+        } else {
+          $(".close").removeClass("hidden");
+        }
+      });
+
+      $("#client-registration-modal .delete, #client-registration-modal .close").click(function(e){
+        e.preventDefault();
+        $("#client-registration-modal").removeClass("is-active");
+      });
+
+      $(".view-registration").click(function(e){
+        e.preventDefault();
+        $("#client-registration-modal").addClass("is-active");
+      });
+
+      $(".register-new").click(function(e){
+        e.preventDefault();
+        $("#client-registration-modal").addClass("is-active");
+        $(this).addClass("is-loading");
+        $(".register-help").removeClass("hidden");
+        $("#client-registration-modal .button.no-border").removeClass("hidden");
+
+        var waitingTimeout = setTimeout(function(){
+          $("#client-registration-modal .button.no-border").addClass("hidden");
+          $(".registration-still-in-progress").addClass("hidden");
+          clearTimeout(waitingTimeout);
+          $(".register-help").addClass("hidden");
+          Cookies.set("client_id", client_info.client_id = generate_client_id());
+          Cookies.set("client_secret", client_info.client_secret = generate_client_secret());
+          Cookies.set("okta_url", 'https://authorization-server.com');
+          Cookies.set("base_url", (window.location.origin+window.location.pathname).replace("/client-registration.html",""));
+          Cookies.set("user_login", client_info.user_login = generate_username())
+          Cookies.set("user_password", client_info.user_password = generate_password());
+          $(".register-new").addClass("hidden");
+          $(".success").removeClass("hidden");
+          // $(".reset-session").removeClass("hidden");
+          if(getReturnTo()) {
+            $(".continue").attr("href", getReturnTo()).removeClass("hidden");
+          } else {
+            $(".continue").attr("href", "index.html").removeClass("hidden");
+          }
+          $(".register-new").removeClass("is-loading");
+          initializeClient();
+        }, 1200);
+      });
+
+      $(".reset-session").click(function(e){
+        e.preventDefault();
+        Cookies.remove("client_id");
+        Cookies.remove("client_secret");
+        Cookies.remove("user_login");
+        Cookies.remove("user_password");
+        window.location.reload();
+      });
+
+      function getReturnTo() {
+        if(params.get("returnto")) {
+          var path = params.get("returnto");
+          if(path.match(/^[a-z\-]+\.html$/)) {
+            return path;
+          }
+        }
+        return false;
+      }
+
+    });
+  </script>
+  <style>
+    .redirect-uris li {
+      line-height: 1.1em;
+      margin-bottom: 9px;
+    }
+    .redirect-uris li:last {
+      margin-bottom: 0;
+    }
+  </style>
+
+</body>
+</html>

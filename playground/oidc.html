@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenID Connect Authorization Code Flow - OAuth 2.0 Playground</title>
+  <script src="//use.typekit.net/ekm8nhh.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <link rel="stylesheet" href="assets/bulma.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-head">
+      <div class="container">
+        <div class="header-bar">
+          <a href="https://www.oauth.com/" id="home-link" title="OAuth 2.0 Servers">
+            <img src="https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo.png" srcset="https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo.png 1x,
+            https://www.oauth.com/wp-content/themes/oauthdotcom/images/oauth_logo@2x.png 2x" alt="OAuth 2.0 Servers">
+          </a>
+        </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <div class="level-item">
+              <div id="site-logo">
+                <a href="https://developer.okta.com" title="Sponsored by Okta" target="_blank"></a>
+              </div>
+
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item" style="margin-right:0;padding-right:0;">
+              <a href="https://www.oauth.com/playground/" class="nav-docs-return">OAuth Playground &rarr;</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="hero-body small">
+      <div class="container">
+        <h1 class="title has-text-centered">
+          OpenID Connect Authorization Code Flow
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="progress-section">
+    <div class="container">
+
+      <div class="steps">
+        <div class="step-item is-active">
+          <div class="step-marker">1</div>
+          <div class="step-details">
+            <p class="step-title">Step 1</p>
+            <p>Build the authorization URL and redirect the user to the authorization server</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-marker">2</div>
+          <div class="step-details">
+            <p class="step-title">Step 2</p>
+            <p>After the user is redirected back to the client, verify the state matches</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-marker">3</div>
+          <div class="step-details">
+            <p class="step-title">Step 3</p>
+            <p>Exchange the authorization code for an ID token and access token</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section hidden" id="error-section">
+    <div class="container">
+
+    <h1 class="title has-text-centered error"></h1>
+    <p class="error_description has-text-centered"></p>
+    <br><br>
+    <p class="has-text-centered"><a href="oidc.html" class="button is-primary">Start Over</a>
+
+    </div>
+  </section>
+
+  <section class="section hidden client-registration-link">
+    <div class="container">
+
+      <h1 class="title has-text-centered">Register a Client</h1>
+      <p class="has-text-centered">Before you can begin the flow, you'll need to register a client and create a user. Registration will give you a client ID an secret your application will use during the OAuth flow.</p>
+      <br><br>
+      <p class="has-text-centered"><a href="client-registration.html?returnto=oidc.html" class="button is-primary">Register a Client</a>
+
+    </div>
+  </section>
+
+  <section class="section step-1 hidden">
+    <div class="container">
+
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            1. Build the Authorization URL
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+
+            <p>OpenID Connect supports many of the same flows as OAuth 2.0. At the end of the OpenID Connect process, the client ends up with an "ID Token", which contains information about the user who signed in. This token is encoded and signed, and the client is expected to parse it directly. When a client uses an OpenID Connect flow, it can request an access token in addition to an ID token.</p>
+
+            <p>In this example, we'll cover the OpenID Connect Authorization Code flow and request an ID token as well as an access token.</p>
+
+            <p>Before authorization begins, it first generates a random string to use for the <code>state</code> parameter. The client will need to store this to be used in the next step.</p>
+
+            <pre class="auth-url-string"><span class="okta-url"></span>/authorize?<span class="auth-params">
+  response_type=code
+  &amp;client_id=<span class="client-id"></span>
+  &amp;redirect_uri=<span class="base-url"></span>/oidc.html
+  &amp;scope=openid+profile+email+photos
+  &amp;state=<span class="oauth2-state"></span>
+  &amp;nonce=<span class="oidc-nonce"></span></span></pre>
+
+              <p>For this demo, we've gone ahead and generated random state and nonce parameters (shown above) and saved them in a cookie.</p>
+
+              <p>Click "Authorize" below to be taken to the authorization server. You'll need to enter the username and password that was generated for you.</p>
+
+            </div>
+          </div>
+        <footer class="card-footer">
+          <div class="card-footer-item"><a href="#" class="button is-primary auth-url">Authorize</a></div>
+        </footer>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section step-2 hidden">
+    <div class="container">
+
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            2. Verify the state parameter
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+
+            <p>The user was redirected back to the client, and you'll notice a few additional query parameters in the URL:</p>
+
+            <pre>?state=<span class="redirect-state"></span>&amp;code=<span class="redirect-code"></span></pre>
+
+            <p>You need to first verify that the <code>state</code> parameter matches the value stored in this user's session so that you protect against CSRF attacks.</p>
+
+            <p>Depending on how you've stored the <code>state</code> parameter (in a cookie, session, or some other way), verify that it matches the state that you originally included in step 1. Previously, we had stored the state in a cookie for this demo.</p>
+
+            <p>Does the state stored by the client (<code class="oauth2-state"></code>) match the state in the redirect (<code class="redirect-state"></code>)?</p>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <div class="card-footer-item">
+            <a href="#" data-step="2" class="button is-primary">It Matches, Continue!</a>
+            <a href="oidc.html" class="button is-danger" style="margin-left:10px;">It's Wrong, Start Over!</a>
+          </div>
+        </footer>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section step-3 hidden">
+    <div class="container">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            3. Exchange the Authorization Code
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+
+            <p>Now you're ready to exchange the authorization code for an access token.</p>
+            <p>The client builds a POST request to the token endpoint with the following parameters:</p>
+
+            <pre class="code-exchange">POST <span class="token-endpoint"><span class="okta-url"></span>/token</span>
+
+<span class="params"></span></pre>
+
+              <p>Note that the client's credentials are included in the POST body in this example. Other authorization servers may require that the credentials are sent as a HTTP Basic Authentication header.</p>
+
+          </div>
+        </div>
+        <footer class="card-footer">
+          <div class="card-footer-item"><a href="#" data-step="3" class="button is-primary">Go</a></div>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section step-4 hidden">
+    <div class="container">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Token Endpoint Response
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p>Here's the response from the token endpoint! <span class="token-response-description"></span></p>
+
+            <pre class="token-response"></pre>
+
+            <p class="success-message hidden">Your application can use the access token to make API requests on behalf of the user.</p>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <div class="card-footer-item"><b>waiting...</b></div>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <p class=""><a href="index.html">&larr; Back to Flows</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content">
+        <div class="columns">
+          <div class="column">
+            <h4>Want to implement OAuth 2.0 without the hassle?</h4>
+            <p>We've built API access management as a service that is secure, scalable, and always on, so you can ship a more secure product, faster.</p>
+            <a class="button is-link" href="http://developer.okta.com/" target="_blank" rel="noopener noreferrer">Secure your APIs</a>
+          </div>
+          <div class="column">
+            <div class="brought-by">
+              <a href="https://developer.okta.com" target="_blank" class="footer-logo">
+                OAuth.com is brought to you by the team at
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88.8 35.82"><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{clip-rule:evenodd;}.cls-3{clip-path:url(#clip-path);}.cls-4{clip-path:url(#clip-path-2);}.cls-5{fill:#007dc1;}.cls-6{clip-path:url(#clip-path-3);}.cls-7{clip-path:url(#clip-path-5);}.cls-8{clip-path:url(#clip-path-7);}</style><clipPath id="clip-path" transform="translate(5 4.91)"><path class="cls-1" d="M9.91,6.57A9.78,9.78,0,0,0,0,16.21a9.78,9.78,0,0,0,9.91,9.64,9.78,9.78,0,0,0,9.91-9.64A9.78,9.78,0,0,0,9.91,6.57M9.91,21a4.82,4.82,0,1,1,0-9.64,4.82,4.82,0,1,1,0,9.64"></path></clipPath><clipPath id="clip-path-2" transform="translate(5 4.91)"><rect class="cls-2" x="-121" y="-359" width="1440" height="3536"></rect></clipPath><clipPath id="clip-path-3" transform="translate(5 4.91)"><path class="cls-1" d="M27.32,19.44a.88.88,0,0,1,1.5-.59c2.47,2.46,6.58,6.67,6.6,6.69a.65.65,0,0,0,.35.22,1.69,1.69,0,0,0,.42,0h4.47a.84.84,0,0,0,.67-1.36l-7.41-7.39-.39-.39c-.84-1-.75-1.36.21-2.35l5.89-6.36A.83.83,0,0,0,39,6.6h-4a1.43,1.43,0,0,0-.39,0,.83.83,0,0,0-.39.22l-5.27,5.52a.89.89,0,0,1-1.53-.58V.86a.78.78,0,0,0-.85-.77H23.16a.76.76,0,0,0-.86.7V25.05c0,.56.48.71.86.71h3.31a.79.79,0,0,0,.85-.73V19.44Z"></path></clipPath><clipPath id="clip-path-5" transform="translate(5 4.91)"><path class="cls-1" d="M54.36,24.93,54,21.7a.79.79,0,0,0-.92-.68,5.08,5.08,0,0,1-.77.06,4.89,4.89,0,0,1-4.94-4.56c0-.09,0-.17,0-.26V12.33a.91.91,0,0,1,.92-.93h4.44a.8.8,0,0,0,.78-.83V7.51a.83.83,0,0,0-.74-.91H48.32a.89.89,0,0,1-.94-.87V.85a.79.79,0,0,0-.86-.76h-3.3a.74.74,0,0,0-.81.74s0,15.61,0,15.7a9.79,9.79,0,0,0,9.92,9.38,10.17,10.17,0,0,0,1.32-.09.82.82,0,0,0,.72-.89"></path></clipPath><clipPath id="clip-path-7" transform="translate(5 4.91)"><path class="cls-1" d="M78.23,20.89c-2.81,0-3.23-1-3.23-4.64,0,0,0,0,0,0V7.42a.83.83,0,0,0-.86-.82H70.82a.85.85,0,0,0-.86.82v.41a10.08,10.08,0,0,0-4.89-1.26,9.78,9.78,0,0,0-9.91,9.64,9.78,9.78,0,0,0,9.91,9.64,10,10,0,0,0,6.44-2.31,5.4,5.4,0,0,0,4.77,2.31c.4,0,2.52.07,2.52-.89V21.53a.62.62,0,0,0-.57-.64M65.08,21a4.82,4.82,0,1,1,5-4.82,4.89,4.89,0,0,1-5,4.82"></path></clipPath></defs><title>okta_logo</title><g class="cls-3"><g class="cls-4"><rect class="cls-5" y="6.48" width="29.82" height="29.28"></rect></g></g><g class="cls-6"><g class="cls-4"><rect class="cls-5" x="22.3" width="29.22" height="35.71"></rect></g></g><g class="cls-7"><g class="cls-4"><rect class="cls-5" x="42.4" width="21.96" height="35.82"></rect></g></g><g class="cls-8"><g class="cls-4"><rect class="cls-5" x="55.17" y="6.48" width="33.64" height="29.28"></rect></g></g></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/jquery-3.2.1.min.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/crypto.js"></script>
+  <script src="assets/cookie.js"></script>
+  <script>
+
+    $(function(){
+
+      /* Resume after redirected back from the auth server */
+      if(window.location.search) {
+        var params = new URLSearchParams(location.search.slice(1));
+        if(params.get("code")) {
+
+          initializeClient(function(){
+            $(".client-registration-link").removeClass("hidden");
+            $("#progress-section").addClass("hidden");
+          }, function(){
+            $(".redirect-code").text(params.get("code"));
+            $(".redirect-state").text(params.get("state"));
+
+            var state = Cookies.get("oauth2-state");
+            $(".oauth2-state").text(state);
+
+            $(".step-1").addClass("hidden");
+            $(".step-2").removeClass("hidden");
+            moveToStep(2);
+            setTimeout(function(){
+              $("html,body").animate({scrollTop: $(".step-2").position().top});
+            }, 100);      
+          });
+
+        } else if(params.get("error")) {
+          $(".error").text(params.get("error"));
+          $(".error_description").text(params.get("error_description"));
+          showError();
+        }
+      } else {
+        initializeClient(function(){
+          $(".client-registration-link").removeClass("hidden");
+          $("#progress-section").addClass("hidden");
+        }, function(){
+        // Generate a new state parameter
+        var state = generate_state();
+        Cookies.set("oauth2-state", state);
+        var nonce = generate_state();
+        Cookies.set("oidc-nonce", nonce);
+        $(".oauth2-state").text(state);
+        $(".oidc-nonce").text(nonce);
+        $(".step-1").removeClass("hidden");
+        });
+      }
+
+      $(".auth-url").click(function(){
+        window.location = Cookies.get("base_url")+"/auth-dialog.html?"+$(".auth-url-string .auth-params").text().replace(/\s/g,"");
+        return false;
+      });
+
+      $("*[data-step]").click(function(e){
+      // Prepare the POST request
+        var code_exchange = {
+        grant_type: "authorization_code",
+        client_id: client_info.client_id,
+        client_secret: client_info.client_secret,
+        redirect_uri: client_info.base_url+"/oidc.html",
+        code: $(".redirect-code").text()
+      };
+      var code_exchange_text = "";
+      for(var i in code_exchange) {
+        code_exchange_text += (code_exchange_text == "" ? "" : "&") + (i + "=" + code_exchange[i] + "\n");
+      }
+
+      switch(parseInt($(this).data('step'))) {
+        case 2:
+        $(".step-3").removeClass("hidden");
+        moveToStep(3);
+        scrollAnimated($(".step-2").outerHeight());
+        $(".code-exchange .params").text(code_exchange_text);
+        break;
+
+        case 3:
+        $(".step-4").removeClass("hidden");
+        $("*[data-step=3]").attr("disabled","disabled").removeClass("is-primary");
+
+        scrollAnimated($(".step-2").outerHeight() + $(".step-3").outerHeight());
+
+        setTimeout(function(){
+        completeStep(3);
+        $(".token-response-description").text("The response includes the ID token and access token.");
+        $(".step-4 .success-message").removeClass("hidden");
+        $(".step-4 .card-footer-item").html("<b>You did it!</b> &nbsp; &bull; &nbsp; <a href='index.html'>Try another flow</a>");
+        $(".token-response").text(JSON.stringify({
+          token_type: "Bearer",
+          expires_in: 86400,
+          access_token: generate_access_token(),
+          scope: "openid profile email photo",
+          id_token: generate_id_token()
+        }, null, 2));
+        }, 1200);
+        break;
+      }
+        e.preventDefault();
+      });
+    });
+    </script>
+
+  </body>
+</html>

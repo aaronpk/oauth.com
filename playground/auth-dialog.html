@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample Auth Dialog</title>
+  <link rel="stylesheet" href="assets/bulma.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+  html {
+    background: #c9c9ce;
+  }
+  </style>
+</head>
+<body>
+
+
+
+<section class="section">
+  <div class="container">
+
+
+    <div class="card" id="log-in-card">
+      <header class="card-header">
+        <h1 class="card-header-title">
+          Log In
+        </h1>
+      </header>
+      <div class="card-content">
+        <div class="content">
+
+          <div class="field">
+            <label class="label">Username</label>
+            <div class="control">
+              <input id="username" class="input" type="email" placeholder="user@example.com">
+            </div>
+          </div>          
+
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input id="password" class="input" type="password">
+            </div>
+          </div>
+
+          <p style="text-align: right;"><a href="#" id="open-userinfo">Forgot your password?</a></p>
+
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="card-footer-item"><a href="#" class="button is-primary" id="log-in-button">Log In</a></div>
+      </footer>
+    </div>
+
+
+    <div class="card hidden" id="authorize-card">
+      <header class="card-header">
+        <p class="card-header-title">
+          An application would like to connect to your account
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+
+          <span id="oauth-request">The application "OAuth 2.0 Playground" would like the ability to access your photos.</span>
+          <span id="openid-request" class="hidden">Signing in to the application "OAuth 2.0 Playground" will share your name and email address with the application, and will let the application access your photos.</span>
+
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="card-footer-item"><a href="#" class="button is-primary" id="redirect-uri">Approve</a></div>
+      </footer>
+    </div>
+
+
+    <div class="card hidden" id="error-card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Error
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <div id="error-message"></div>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="card-footer-item"><a href="javascript:window.history.back()" class="button is-primary">Back</a></div>
+      </footer>
+    </div>
+
+
+  </div>
+</section>
+
+<script src="assets/jquery-3.2.1.min.js"></script>
+<script src="assets/cookie.js"></script>
+<script src="assets/crypto.js"></script>
+<script src="assets/common.js"></script>
+<script>
+$(function(){
+
+  if(window.location.search) {
+    var params = new URLSearchParams(location.search.slice(1));
+
+    var path = '/playground';
+
+    // Check for allowed redirect URIs
+    var redirect_uri = params.get('redirect_uri');
+    var allowed_redirect_uris = [
+      'authorization-code-with-pkce.html',
+      'authorization-code.html',
+      'implicit.html',
+      'oidc.html',
+    ].map(function(a){ return window.location.origin+path+'/'+a });
+
+    if(!allowed_redirect_uris.includes(redirect_uri)) {
+      $("#log-in-card").addClass("hidden");
+      $("#error-message").text("The redirect_uri in the request ("+redirect_uri+") is not allowed.");
+      $("#error-card").removeClass("hidden");
+      return;
+    }
+
+    if(params.get('response_type') == 'token') {
+      var code = generate_access_token();
+      $("#redirect-uri").attr("href", params.get('redirect_uri')+"#state="+params.get('state')+"&access_token="+code+"&token_type=Bearer&expires_in=86400&scope=photos");
+    } else {
+      var code = generate_auth_code();
+      $("#redirect-uri").attr("href", params.get('redirect_uri')+"?state="+params.get('state')+"&code="+code);
+    }
+
+    var scopes = params.get('scope').split(' ');
+
+    if(scopes.includes('openid')) {
+      $("#oauth-request").addClass('hidden');
+      $("#openid-request").removeClass('hidden');
+      $("#redirect-uri").text('Sign In');
+    }
+
+  }
+
+  $("#log-in-button").click(function(e){
+    e.preventDefault();
+
+    if((Cookies.get("user_login") != $("#username").val() || Cookies.get("user_password") != $("#password").val())) {
+      $("#username").addClass('is-danger');
+      $("#password").addClass('is-danger');
+    } else {
+      $("#username").removeClass('is-danger').addClass('is-success');
+      $("#password").removeClass('is-danger').addClass('is-success');
+      $("#log-in-card").addClass('hidden');
+      $("#authorize-card").removeClass('hidden');
+    }
+
+  });
+
+});
+</script>
+
+</body>
+</html>

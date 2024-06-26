@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OAuth 2.0 Playground</title>
+  <script src="//use.typekit.net/ekm8nhh.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+  <link rel="stylesheet" href="assets/bulma.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <div style="margin: 20px;">
+    <h2 class="title">User Account</h2>
+
+    <table class="table" width="100%">
+      <tr>
+        <td>login</td>
+        <td><span class="user-login"></span></td>
+      </tr>
+      <tr>
+        <td>password</td>
+        <td><span class="user-password"></span></td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="assets/jquery-3.2.1.min.js"></script>
+  <script src="assets/cookie.js"></script>
+  <script src="assets/common.js"></script>
+  <script>
+    $(function(){
+      initializeClient(function(){
+      }, function(){
+      });
+      $(".user-login, .user-password").click(function(){
+        var range, selection;
+        if(window.getSelection && document.createRange) {
+          selection = window.getSelection();
+          range = document.createRange();
+          range.selectNodeContents(this);
+          selection.removeAllRanges();
+          selection.addRange(range);
+        } else if(document.selection && document.body.createTextRange) {
+          range = document.body.createTextRange();
+          range.moveToElementText(this);
+          range.select();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
