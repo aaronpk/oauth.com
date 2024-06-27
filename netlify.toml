@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://oauthcom.netlify.app"
+  to = "https://www.oauth.com"
+  status = 301
+  force = true
